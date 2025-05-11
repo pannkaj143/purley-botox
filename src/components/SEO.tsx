@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -12,12 +11,12 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = 'Dental Implant in Purley, Banstead, Kenley and Caterham | Confidential Clinic',
-  description = 'Expert dental implant solutions in Purley. Transform your smile with our specialized implant services at Confidential Clinic.',
+  title = 'Botox in Purley, Banstead, Kenley and Caterham | Confidential Clinic',
+  description = 'Expert Botox solutions in Purley. Transform your look with our specialized Botox services at Confidential Clinic.',
   canonicalUrl = 'https://yourwebsite.com',
   ogType = 'website',
   ogImage = '/lovable-uploads/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png',
-  ogImageAlt = 'Confidential Clinic - Dental Implants in Purley',
+  ogImageAlt = 'Confidential Clinic - Botox in Purley',
   structuredData
 }: SEOProps) => {
   return (

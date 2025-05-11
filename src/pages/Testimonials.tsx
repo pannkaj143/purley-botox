@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTASection from '@/components/CTASection';
@@ -10,7 +9,7 @@ const Testimonials = () => {
       name: "Sophie K.",
       location: "Kingston",
       rating: 5,
-      text: "I was extremely anxious about getting dental implants, but Dr. Patel and the team at Confidential Clinic were amazing. They explained everything clearly and made sure I was comfortable throughout the process. My implants look and feel just like natural teeth - I couldn't be happier with the results!"
+      text: "I was extremely anxious about getting Botox treatments, but Dr. Patel and the team at Confidential Clinic were amazing. They explained everything clearly and made sure I was comfortable throughout the process. My treatments look and feel just like natural teeth - I couldn't be happier with the results!"
     },
     {
       name: "James B.",
@@ -22,13 +21,13 @@ const Testimonials = () => {
       name: "Amelia T.",
       location: "Kingston",
       rating: 5,
-      text: "I lost my front tooth in an accident and was devastated. Dr. Patel restored my smile with a dental implant that looks completely natural. The care I received was exceptional from start to finish. I highly recommend Confidential Clinic to anyone needing dental implants."
+      text: "I lost my front tooth in an accident and was devastated. Dr. Patel restored my smile with a Botox treatment that looks completely natural. The care I received was exceptional from start to finish. I highly recommend Confidential Clinic to anyone needing Botox treatments."
     },
     {
       name: "Robert M.",
       location: "Richmond",
       rating: 5,
-      text: "The team at Confidential Clinic made getting dental implants a smooth and painless experience. Dr. Patel is clearly an expert in his field, and the support staff is friendly and efficient. My implants have been perfect for over two years now."
+      text: "The team at Confidential Clinic made getting Botox treatments a smooth and painless experience. Dr. Patel is clearly an expert in his field, and the support staff is friendly and efficient. My treatments have been perfect for over two years now."
     },
     {
       name: "Patricia D.",
@@ -66,7 +65,7 @@ const Testimonials = () => {
             Patient Testimonials
           </h1>
           <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-white animate-slide-in" style={{ animationDelay: '0.2s' }}>
-            Read what our patients have to say about their dental implant experience at Confidential Clinic.
+            Read what our patients have to say about their Botox treatment experience at Confidential Clinic.
           </p>
         </div>
       </div>
@@ -119,7 +118,7 @@ const Testimonials = () => {
                   <div>
                     <img 
                       src="https://images.unsplash.com/photo-1607604760190-ec4e806d0351?q=80&w=500&auto=format&fit=crop" 
-                      alt="Before Dental Implant" 
+                      alt="Before Botox Treatment" 
                       className="rounded-lg shadow-md"
                     />
                     <p className="text-center mt-2 font-medium">Before</p>
@@ -127,7 +126,7 @@ const Testimonials = () => {
                   <div>
                     <img 
                       src="https://images.unsplash.com/photo-1601063476524-3e1710bc8bf1?q=80&w=500&auto=format&fit=crop" 
-                      alt="After Dental Implant" 
+                      alt="After Botox Treatment" 
                       className="rounded-lg shadow-md"
                     />
                     <p className="text-center mt-2 font-medium">After</p>

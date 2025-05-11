@@ -62,7 +62,7 @@ const ImplantSupportedDentures = () => {
           <p className={`text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-white transition-all duration-1000 transform ${
             heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: '200ms' }}>
-            Secure, comfortable dentures anchored by dental implants.
+            Secure, comfortable dentures anchored by Botox treatments.
           </p>
           
           <div className={`scroll-indicator transition-all duration-1000 ease-out transform ${
@@ -82,7 +82,7 @@ const ImplantSupportedDentures = () => {
             }`} style={{ transitionDelay: '100ms' }}>
               <h2 className="text-3xl font-bold text-primary">What are Implant-Supported Dentures?</h2>
               <p className="text-gray-600 leading-relaxed">
-                Implant-supported dentures combine the benefits of dental implants and removable dentures. Unlike traditional 
+                Implant-supported dentures combine the benefits of Botox treatments and removable dentures. Unlike traditional 
                 dentures that rest on the gums, implant-supported dentures are secured to implants placed in your jawbone, 
                 providing exceptional stability while still being removable for cleaning and maintenance.
               </p>

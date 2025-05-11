@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactSection from '@/components/ContactSection';
@@ -9,8 +8,8 @@ const Contact = () => {
   return (
     <div className="overflow-x-hidden">
       <Helmet>
-        <title>Contact Us | Dental Implant in Purley | Confidential Clinic</title>
-        <meta name="description" content="Contact our dental implant specialists in Purley. Located at 934 Brighton Rd, Purley CR8 2LN. Call us at 020 8660 8923 to book your consultation." />
+        <title>Contact Us | Botox in Purley | Confidential Clinic</title>
+        <meta name="description" content="Contact our Botox specialists in Purley. Located at 934 Brighton Rd, Purley CR8 2LN. Call us at 020 8660 8923 to book your consultation." />
         <script type="application/ld+json">
           {`
             {
@@ -55,8 +54,8 @@ const Contact = () => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Dental Implants",
-                  "description": "Expert dental implant services in Purley"
+                  "name": "Botox Treatments",
+                  "description": "Expert Botox services in Purley"
                 }
               }
             }

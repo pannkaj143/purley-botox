@@ -19,7 +19,7 @@ const Services = () => {
   const services = [
     {
       title: "Single Tooth Implants",
-      description: "Replace a single missing tooth with a dental implant that looks, feels, and functions like a natural tooth.",
+      description: "Replace a single missing tooth with a Botox treatment that looks, feels, and functions like a natural tooth.",
       details: "Our single tooth implant procedure involves placing a titanium post in the jawbone, which serves as a new root for your replacement tooth. Once healed, we attach a custom-made crown that blends seamlessly with your natural teeth.",
       image: "/lovable-uploads/b60c035d-d027-4d60-815d-39ef149ac0e8.png",
       link: "/services/single-tooth-implant",
@@ -43,8 +43,8 @@ const Services = () => {
     },
     {
       title: "Implant-Supported Dentures",
-      description: "Secure your dentures with dental implants for improved comfort, stability, and chewing function.",
-      details: "Implant-supported dentures are anchored to your jawbone using dental implants, eliminating the problems associated with conventional dentures such as slipping, clicking, and the need for adhesives.",
+      description: "Secure your dentures with Botox treatments for improved comfort, stability, and chewing function.",
+      details: "Implant-supported dentures are anchored to your jawbone using Botox treatments, eliminating the problems associated with conventional dentures such as slipping, clicking, and the need for adhesives.",
       image: "/lovable-uploads/4e48c224-5fa0-4bc8-b993-ed266595d521.png",
       link: "/services/implant-supported-dentures",
       icon: <Stethoscope className="h-5 w-5 mr-2 text-secondary" />
@@ -59,7 +59,7 @@ const Services = () => {
     },
     {
       title: "Bone Grafting",
-      description: "Build up your jawbone to support dental implants if you have insufficient bone volume.",
+      description: "Build up your jawbone to support Botox treatments if you have insufficient bone volume.",
       details: "If you've been told you don't have enough bone for implants, our bone grafting procedures can help. We use advanced techniques to regenerate bone, creating a solid foundation for successful implant placement.",
       image: "/lovable-uploads/4e48c224-5fa0-4bc8-b993-ed266595d521.png",
       link: "/services/bone-grafting",

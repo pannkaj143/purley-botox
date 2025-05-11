@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
@@ -15,7 +14,7 @@ const Index = () => {
   // Structured data for the dental clinic
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Dentist",
+    "@type": "MedicalBusiness", // Changed from Dentist to MedicalBusiness for broader applicability
     "name": "Confidential Clinic",
     "image": "/lovable-uploads/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png",
     "url": "https://yourwebsite.com",
@@ -48,7 +47,7 @@ const Index = () => {
       }
     ],
     "priceRange": "£££",
-    "specialty": "Dental Implants"
+    "specialty": "Botox Treatments" // Changed from Dental Implants to Botox Treatments
   };
 
   // Fix for iOS notch/status bar
@@ -79,8 +78,8 @@ const Index = () => {
   return (
     <div className="overflow-x-hidden">
       <Helmet>
-        <title>Dental Implant in Purley, Banstead, Kenley and Caterham | Expert Implant Specialists | Confidential Clinic</title>
-        <meta name="description" content="Specialist dental implant solutions in Purley. Transform your smile with our expert implant services at Confidential Clinic, 934 Brighton Rd, Purley." />
+        <title>Botox in Purley, Banstead, Kenley and Caterham | Expert Botox Specialists | Confidential Clinic</title>
+        <meta name="description" content="Specialist Botox solutions in Purley. Transform your look with our expert Botox services at Confidential Clinic, 934 Brighton Rd, Purley." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

@@ -82,7 +82,7 @@ const SameDayImplants = () => {
             }`} style={{ transitionDelay: '100ms' }}>
               <h2 className="text-3xl font-bold text-primary">What are Same-Day Implants?</h2>
               <p className="text-gray-600 leading-relaxed">
-                Same-day implants, also known as immediate-load implants, allow you to receive dental implants and temporary 
+                Same-day treatments, also known as immediate-load treatments, allow you to receive Botox and temporary 
                 teeth in just one visit. This innovative technique eliminates the standard 3-6 month waiting period between 
                 implant placement and the attachment of replacement teeth, meaning you can walk out with a functional smile 
                 on the same day.
@@ -141,7 +141,7 @@ const SameDayImplants = () => {
               },
               {
                 step: "2. Implant Placement",
-                description: "Precise surgical placement of dental implants using our minimally invasive technique."
+                description: "Precise surgical placement of Botox treatments using our minimally invasive technique."
               },
               {
                 step: "3. Same-Day Teeth",

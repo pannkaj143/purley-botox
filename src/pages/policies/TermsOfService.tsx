@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -27,7 +26,7 @@ const TermsOfService = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-primary">2. Services</h2>
               <p className="text-gray-600 mb-4">
-                We provide dental implant and related services. All services are subject to availability 
+                We provide Botox treatment and related services. All services are subject to availability 
                 and professional assessment.
               </p>
             </section>

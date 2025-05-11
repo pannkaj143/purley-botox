@@ -92,34 +92,34 @@ const HeroSection = () => {
             }`}
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)", transitionDelay: '200ms' }}
           >
-            Transform Your Smile with{' '}
+            Transform Your Look with{' '}
             <span className="relative inline-block">
-              <span className="text-secondary">Dental Implants</span>
+              <span className="text-secondary">Botox Treatments</span>
               <span className="absolute -top-6 -right-6 animate-pulse-slow">
                 <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-secondary" />
               </span>
             </span>
           </h1>
 
-          <h2 
+          <h2
             className={`text-xl md:text-3xl mb-4 text-white font-medium transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '300ms' }}
           >
-            Dental Implant in Purley
+            Botox in Purley
           </h2>
 
-          <p 
+          <p
             className={`text-base md:text-2xl max-w-3xl mx-auto mb-8 text-white leading-relaxed transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '400ms' }}
           >
-            Discover expert dental implant solutions at Confidential Clinic - where advanced technology meets compassionate care to deliver lasting, beautiful smiles. 
+            Discover expert Botox solutions at Confidential Clinic - where advanced technology meets compassionate care to deliver lasting, beautiful results.
           </p>
 
-          <div 
+          <div
             className={`space-y-4 md:space-x-6 md:space-y-0 transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
