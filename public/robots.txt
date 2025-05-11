@@ -1,0 +1,15 @@
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Specify important pages
+Allow: /
+Allow: /contact
+Allow: /services
+Allow: /about
+Allow: /testimonials
+Allow: /faq

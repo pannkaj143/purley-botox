@@ -1,0 +1,20 @@
+
+/* AboutClinic component specific styles */
+.about-clinic-image {
+  max-width: 70% !important;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-clinic-image:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .about-clinic-image {
+    max-width: 90% !important;
+  }
+}
