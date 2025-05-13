@@ -94,7 +94,7 @@ const HeroSection = () => {
           >
             Transform Your Look with{' '}
             <span className="relative inline-block">
-              <span className="text-secondary">Botox Treatments</span>
+              <span className="text-secondary">Facial Aesthetic Treatments</span>
               <span className="absolute -top-6 -right-6 animate-pulse-slow">
                 <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-secondary" />
               </span>
@@ -107,7 +107,7 @@ const HeroSection = () => {
             }`}
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '300ms' }}
           >
-            Botox in Purley
+            in Purley
           </h2>
 
           <p
@@ -116,7 +116,7 @@ const HeroSection = () => {
             }`}
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '400ms' }}
           >
-            Discover expert Botox solutions at Confidential Clinic - where advanced technology meets compassionate care to deliver lasting, beautiful results.
+            Discover expert solutions at Confidential Clinic - where advanced technology meets compassionate care to deliver lasting, beautiful results.
           </p>
 
           <div

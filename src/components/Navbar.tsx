@@ -74,12 +74,7 @@ const Navbar = () => {
               <a href="https://www.instagram.com/confidentalclinic_group/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram size={20} className="text-primary hover:text-secondary transition-colors" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter size={20} className="text-primary hover:text-secondary transition-colors" />
-              </a>
-              <a href="https://uk.linkedin.com/company/confidental-clinic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin size={20} className="text-primary hover:text-secondary transition-colors" />
-              </a>
+              
             </div>
             
             <a href="https://umzx.sfd.co:300" target="_blank" rel="noopener noreferrer">
@@ -87,7 +82,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection('contact-section')}
                 className="bg-secondary hover:bg-primary text-white transition-colors"
               >
-                Book Appointment
+                Book Online Now
               </Button>
             </a>
           </div>
@@ -101,12 +96,7 @@ const Navbar = () => {
               <a href="https://www.instagram.com/confidentalclinic_group/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram size={18} className="text-primary hover:text-secondary transition-colors" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter size={18} className="text-primary hover:text-secondary transition-colors" />
-              </a>
-              <a href="https://uk.linkedin.com/company/confidental-clinic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin size={18} className="text-primary hover:text-secondary transition-colors" />
-              </a>
+              
             </div>
             
             <button
@@ -151,7 +141,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection('contact-section')}
                   className="bg-secondary hover:bg-primary text-white transition-colors w-full"
                 >
-                  Book Appointment
+                  Book Online Now
                 </Button>
               </a>
               <div className="flex items-center justify-between pt-2 border-t border-gray-200">

@@ -103,24 +103,6 @@ const ServiceImageGallery: React.FC<ServiceImageGalleryProps> = ({ beforeImage, 
 };
 
 const FeaturesSection = () => {
-  const features = [
-    {
-      icon: <Stethoscope className="h-10 w-10 text-secondary" />,
-      title: "Expert Dental Implant Services",
-      description: "Our dental team offers a wide range of services in addition to dental implants including orthodontics, invisalign, cosmetic dentistry, and tooth whitening."
-    },
-    {
-      icon: <Phone className="h-10 w-10 text-secondary" />,
-      title: "Customer Support",
-      description: "Our team is ready to help with any queries and provide support throughout your treatment journey."
-    },
-    {
-      icon: <User className="h-10 w-10 text-secondary" />,
-      title: "Experienced Dentists",
-      description: "Our dentists have years of experience and specialized training in dental implant procedures."
-    }
-  ];
-
   const implantServices = [
     {
       title: "Single Tooth Implants",
@@ -178,33 +160,27 @@ const FeaturesSection = () => {
     <section ref={sectionRef} id="services-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Dental Implant Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Facial Aesthetic Services</h2>
           <div className="w-20 h-1 bg-secondary mx-auto"></div>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            At Confidential Clinic, we provide exceptional dental implant services with a focus on patient comfort and satisfaction.
+            Wrinkle Reduction Treatments for a Smoother, Youthful Look.
+          </p>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Looking to soften fine lines and rejuvenate your skin? Our wrinkle reduction treatments are designed to target common areas of facial ageing - including frown lines, crow's feet, and forehead creases for a naturally refreshed appearance.
+          </p>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Using advanced techniques, our experienced medical team carefully addresses the muscles responsible for dynamic wrinkles, helping to smooth the skin and restore a more youthful expression.
+          </p>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            This minimally invasive procedure offers visible results that typically last for several months. Many clients choose to repeat the treatment periodically to maintain their revitalised look - all without surgery or downtime.
+          </p>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Book a consultation today to find out if this non-surgical anti-ageing solution is right for you.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className={`border-none shadow-lg hover:shadow-xl transition-all ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} 
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <CardHeader className="pb-2">
-                <div className="mb-2">{feature.icon}</div>
-                <CardTitle className="text-xl font-bold">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base text-gray-600">{feature.description}</CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-4">Our Implant Solutions</h3>
+          <h3 className="text-2xl font-bold mb-4">Patient Gallery and Treatment Zones</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {implantServices.map((service, index) => (
               <div 

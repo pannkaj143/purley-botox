@@ -7,9 +7,9 @@ const AboutClinic = () => {
   const { ref: sectionRef, isVisible } = useAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   const benefits = [
-    "Highly recommended dentists ensuring excellent patient satisfaction",
-    "Pain-free and fast implant surgery appointments available",
-    "NHS and private patients welcome"
+    "Highly recommended aesthetic clinicians ensuring excellent patient satisfaction",
+    "Are you looking to roll back the signs of ageing and achieve younger looking skin?",
+    "Free consultation available"
   ];
 
   return (
@@ -28,9 +28,9 @@ const AboutClinic = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl font-bold mb-4">WELCOME TO CONFIDENTIAL CLINIC</h2>
             <p className="text-gray-700 mb-6">
-              Highly specialized and personalized to ensure that all aspects of 
-              dental care are provided with patience, knowledge and attention to 
-              detail in order to maintain optimal dental health, resulting in happy 
+              Highly specialized and personalised to ensure that all aspects of 
+              care are provided with patience, knowledge and attention to 
+              detail in order to maintain optimal health, resulting in happy 
               and satisfied patients.
             </p>
             
