@@ -103,53 +103,45 @@ const ServiceImageGallery: React.FC<ServiceImageGalleryProps> = ({ beforeImage, 
 };
 
 const FeaturesSection = () => {
-  const implantServices = [
+  const botoxServices = [
     {
-      title: "Single Tooth Implants",
-      description: "Perfect solution for replacing a single missing tooth without affecting adjacent teeth.",
+      title: "Forehead Lines",
+      description: "Smoothing out horizontal lines across the forehead.",
       images: [
-        "/implant-services-photos/single_tooth_before.jpg",
-        "/implant-services-photos/single_tooth_after.jpg"
+        "/placeholder-before.jpg", // Placeholder, to be updated by user
+        "/placeholder-after.jpg"  // Placeholder, to be updated by user
       ]
     },
     {
-      title: "Multiple Tooth Implants",
-      description: "Ideal for replacing several missing teeth with a sturdy and natural-looking solution.",
+      title: "Glabellar Lines (Frown Lines)",
+      description: "These are the vertical lines between the eyebrows, often called \"frown lines\".",
       images: [
-        "/implant-services-photos/multiple_tooth_before.jpg",
-        "/implant-services-photos/multiple_tooth_after.jpg"
+        "/placeholder-before.jpg", // Placeholder, to be updated by user
+        "/placeholder-after.jpg"  // Placeholder, to be updated by user
       ]
     },
     {
-      title: "Full Arch Implants",
-      description: "Complete restoration for an entire arch of missing teeth with our advanced implant technology.",
+      title: "Crow's Feet",
+      description: "These are the lines that radiate out from the corners of the eyes when you smile or squint.",
       images: [
-        "/implant-services-photos/full_arch_before.jpg",
-        "/implant-services-photos/full_arch_after.jpg"
+        "/placeholder-before.jpg", // Placeholder, to be updated by user
+        "/placeholder-after.jpg"  // Placeholder, to be updated by user
       ]
     },
     {
-      title: "Implant Supported Dentures",
-      description: "Secure and comfortable alternative to traditional removable dentures.",
+      title: "Bunny Lines",
+      description: "Smoothing out lines on the sides of the nose.",
       images: [
-        "/implant-services-photos/implant_supported_denture_before.jpg",
-        "/implant-services-photos/implant_supported_denture_after.jpg"
+        "/placeholder-before.jpg", // Placeholder, to be updated by user
+        "/placeholder-after.jpg"  // Placeholder, to be updated by user
       ]
     },
     {
-      title: "Same-Day Implants",
-      description: "Get your implant and temporary crown in just one visit with our efficient procedures.",
+      title: "Smoker's Lines",
+      description: "Vertical lines around the mouth, often caused by repetitive puckering or smoking.",
       images: [
-        "/implant-services-photos/same_day_before.jpg",
-        "/implant-services-photos/same_day_after.jpg"
-      ]
-    },
-    {
-      title: "Bone Grafting", // Corrected title
-      description: "Preparatory procedure to build up bone structure for successful implant placement.",
-      images: [
-        "/implant-services-photos/bone_grafting_before.jpg",
-        "/implant-services-photos/bone_grafting_after.jpg" // Corrected path
+        "/placeholder-before.jpg", // Placeholder, to be updated by user
+        "/placeholder-after.jpg"  // Placeholder, to be updated by user
       ]
     }
   ];
@@ -162,46 +154,56 @@ const FeaturesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Facial Aesthetic Services</h2>
           <div className="w-20 h-1 bg-secondary mx-auto"></div>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Wrinkle Reduction Treatments for a Smoother, Youthful Look.
           </p>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Looking to soften fine lines and rejuvenate your skin? Our wrinkle reduction treatments are designed to target common areas of facial ageing - including frown lines, crow's feet, and forehead creases for a naturally refreshed appearance.
+          <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Looking to soften fine lines and rejuvenate your skin? Our wrinkle reduction treatments are designed to target common areas of facial ageing — including frown lines, crow’s feet, and forehead creases — for a naturally refreshed appearance.
           </p>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Using advanced techniques, our experienced medical team carefully addresses the muscles responsible for dynamic wrinkles, helping to smooth the skin and restore a more youthful expression.
+          <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Using advanced techniques, our experienced team carefully addresses the muscles responsible for dynamic wrinkles, helping to smooth the skin and restore a more youthful expression.
           </p>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            This minimally invasive procedure offers visible results that typically last for several months. Many clients choose to repeat the treatment periodically to maintain their revitalised look - all without surgery or downtime.
+          <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            This minimally invasive procedure offers visible results that typically last for several months. Many clients choose to repeat the treatment periodically to maintain their revitalised look — all without surgery or downtime.
           </p>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Book a consultation today to find out if this non-surgical anti-ageing solution is right for you.
+          <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
+            <a
+              href="#contact-section"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact-section');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="text-primary hover:text-secondary font-semibold underline transition-colors"
+            >
+              Book a consultation today
+            </a>
+            {' '}to find out if this non-surgical anti-ageing solution is right for you.
           </p>
         </div>
 
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold mb-4">Patient Gallery and Treatment Zones</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {implantServices.map((service, index) => (
+          {/* Flexbox container for responsive columns and centered last row */}
+          <div className="flex flex-wrap justify-center -mx-3 mt-8">
+            {botoxServices.map((service, index) => (
               <div 
                 key={index} 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all"
+                // Adjust width for columns and add padding for gutters
+                className="w-full sm:w-1/2 lg:w-1/3 px-3 mb-6"
               >
-                <h4 className="text-xl font-semibold mb-3">{service.title}</h4>
-                <p className="text-gray-600">{service.description}</p>
-                {service.title === "Bone Grafting" ? (
-                  <img
-                    src={service.images[0]} // Displaying the actual 'before' image for Bone Grafting
-                    alt={service.title}
-                    className="w-full h-64 object-cover mt-4 rounded-lg shadow-md" 
-                  />
-                ) : (
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all h-full flex flex-col">
+                  <h4 className="text-xl font-semibold mb-3">{service.title}</h4>
+                  {/* flex-grow will make description take available space, pushing gallery to bottom */}
+                  <p className="text-gray-600 mb-4 flex-grow">{service.description}</p>
                   <ServiceImageGallery 
-                    beforeImage={service.images[1]} // Actual 'after' image (base, right part of slider)
-                    afterImage={service.images[0]}  // Actual 'before' image (clipped, left part of slider)
+                    beforeImage={service.images[0]} // Placeholder - user to update
+                    afterImage={service.images[1]}  // Placeholder - user to update
                     title={service.title} 
                   />
-                )}
+                </div>
               </div>
             ))}
           </div>

@@ -15,16 +15,16 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is the average cost of dental implants?",
-      answer: "On average, patients can expect to pay anywhere from £1,000 to £3,800 for a single tooth implant. The price of a dental implant usually includes the implant post, abutment, and crown. Additional costs may involve initial consultations, x-rays, and possible bone grafting, if necessary."
+      question: "Is treatment safe?",
+      answer: "Botulinum Toxin as a muscle relaxant has an excellent safety record and a long record of use in medicine. It has been used successfully in adults and children in variety medical conditions over the last 20 years. It has been used cosmetically to treat facial wrinkles for about 15 years and has become one of the most popular and frequently used cosmetic treatments."
     },
     {
-      question: "Can you get tooth implants on the NHS?",
-      answer: "Implants are usually only available privately. They’re sometimes available on the NHS for patients whose face and teeth have been damaged, such as people who have had mouth cancer or an accident that’s knocked a tooth out."
+      question: "What is the average cost?",
+      answer: "On average, patients can expect to pay anywhere from £175 to £400. The price varies depending on the zone and difficulty of the treatment."
     },
     {
-      question: "How long do dental implants last?",
-      answer: "With brushing, flossing and regular dental visits, implants can last a lifetime. The restoration part of your dental implant will need replacing at some point. Most crowns and bridges last around 15 years and most dentures last at least seven years, but this timeline varies."
+      question: "How long does treatment last?",
+      answer: "Treatment usually lasts few months before the affects wear off but with repeated treatment this can last longer."
     },
     {
       question: "Can implants be fitted in one day?",

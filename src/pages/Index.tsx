@@ -100,7 +100,6 @@ const Index = () => {
       <HeroSection />
       <AboutClinic />
       <FeaturesSection />
-      <DoctorProfile />
       <TestimonialsSection />
       <FAQSection />
       <ContactSection />
