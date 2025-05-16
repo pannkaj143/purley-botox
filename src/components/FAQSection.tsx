@@ -26,10 +26,7 @@ const FAQSection = () => {
       question: "How long does treatment last?",
       answer: "Treatment usually lasts few months before the affects wear off but with repeated treatment this can last longer."
     },
-    {
-      question: "Can implants be fitted in one day?",
-      answer: "Many dentists offer same-day dental implants using advanced techniques to place and, almost immediately, load the implants. This procedure relies on the implants being placed so that they cannot move throughout the healing process."
-    }
+    
   ];
 
   return (

@@ -60,7 +60,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('about-section')} className="font-medium transition-colors text-primary hover:text-secondary">About</button>
             <button onClick={() => scrollToSection('services-section')} className="font-medium transition-colors text-primary hover:text-secondary">Services</button>
-            <button onClick={() => scrollToSection('doctor-section')} className="font-medium transition-colors text-primary hover:text-secondary">Doctor</button>
             <button onClick={() => scrollToSection('testimonials-section')} className="font-medium transition-colors text-primary hover:text-secondary">Testimonials</button>
             <button onClick={() => scrollToSection('faq-section')} className="font-medium transition-colors text-primary hover:text-secondary">FAQ</button>
             
@@ -132,7 +131,6 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4 p-4">
               <button role="menuitem" onClick={() => scrollToSection('about-section')} className="text-primary hover:text-secondary font-medium transition-colors text-left">About</button>
               <button role="menuitem" onClick={() => scrollToSection('services-section')} className="text-primary hover:text-secondary font-medium transition-colors text-left">Services</button>
-              <button role="menuitem" onClick={() => scrollToSection('doctor-section')} className="text-primary hover:text-secondary font-medium transition-colors text-left">Doctor</button>
               <button role="menuitem" onClick={() => scrollToSection('testimonials-section')} className="text-primary hover:text-secondary font-medium transition-colors text-left">Testimonials</button>
               <button role="menuitem" onClick={() => scrollToSection('faq-section')} className="text-primary hover:text-secondary font-medium transition-colors text-left">FAQ</button>
               <a href="https://umzx.sfd.co:300" target="_blank" rel="noopener noreferrer" className="w-full">

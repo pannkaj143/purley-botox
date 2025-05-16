@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ClinicLogoProps {
@@ -12,7 +11,7 @@ const ClinicLogo: React.FC<ClinicLogoProps> = ({
 }) => {
   return (
     <img
-      src="/lovable-uploads/da638ab1-696c-425f-8892-3312cc9c158f.png"
+      src="/images/da638ab1-696c-425f-8892-3312cc9c158f.png"
       alt="Confidential Clinic Logo"
       className={className}
     />

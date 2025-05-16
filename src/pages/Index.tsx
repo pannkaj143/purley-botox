@@ -16,7 +16,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness", // Changed from Dentist to MedicalBusiness for broader applicability
     "name": "Confidential Clinic",
-    "image": "/lovable-uploads/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png",
+    "image": "/images/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png",
     "url": "https://yourwebsite.com",
     "telephone": "020 8660 8923",
     "address": {

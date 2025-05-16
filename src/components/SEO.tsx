@@ -15,7 +15,7 @@ const SEO = ({
   description = 'Expert Botox solutions in Purley. Transform your look with our specialized Botox services at Confidential Clinic.',
   canonicalUrl = 'https://yourwebsite.com',
   ogType = 'website',
-  ogImage = '/lovable-uploads/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png',
+  ogImage = '/images/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png',
   ogImageAlt = 'Confidential Clinic - Botox in Purley',
   structuredData
 }: SEOProps) => {

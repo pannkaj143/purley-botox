@@ -19,7 +19,7 @@ const Footer = () => {
           <div>
             <div className="inline-block mb-4">
               <img 
-                src="/lovable-uploads/bddb16ef-30c2-415d-a400-bac83cdec2eb.png" 
+                src="/images/bddb16ef-30c2-415d-a400-bac83cdec2eb.png" 
                 alt="Confidential Clinic Logo"
                 className="h-16"
               />

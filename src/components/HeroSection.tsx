@@ -56,7 +56,7 @@ const HeroSection = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-secondary/90">
         <img 
-          src="/lovable-uploads/1b41ce4f-ed8a-4e7c-8630-912613b5bdcf.png" 
+          src="/images/1b41ce4f-ed8a-4e7c-8630-912613b5bdcf.png" 
           alt="Dental Procedure" 
           className="w-full h-full object-cover mix-blend-overlay opacity-80"
           style={{ objectPosition: 'center 20%' }}
@@ -94,7 +94,7 @@ const HeroSection = () => {
           >
             Transform Your Look with{' '}
             <span className="relative inline-block">
-              <span className="text-secondary">Facial Aesthetic Treatments</span>
+              <span className="text-secondary">Facial Aesthetic</span>
               <span className="absolute -top-6 -right-6 animate-pulse-slow">
                 <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-secondary" />
               </span>
@@ -107,7 +107,7 @@ const HeroSection = () => {
             }`}
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '300ms' }}
           >
-            in Purley
+            Treatments in Purley
           </h2>
 
           <p
