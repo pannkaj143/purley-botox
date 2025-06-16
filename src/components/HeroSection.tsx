@@ -54,13 +54,15 @@ const HeroSection = () => {
       }}
     >
       {/* Background image with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-secondary/90">
+      <div className="absolute inset-0">
         <img 
-          src="/images/1b41ce4f-ed8a-4e7c-8630-912613b5bdcf.png" 
-          alt="Dental Procedure" 
-          className="w-full h-full object-cover mix-blend-overlay opacity-80"
-          style={{ objectPosition: 'center 20%' }}
+          src="/images/hero_background.jpg" 
+          alt="Hero Background" 
+          className="w-full h-full object-cover opacity-90"
+          style={{ objectPosition: '60% 50%' }}
         />
+        {/* Gradient: light on left, transparent in center, theme color on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-primary/90"></div>
       </div>
 
       {/* Animated particles with smoother animations */}
@@ -84,47 +86,64 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-10 text-center text-white relative z-10 hero-content">
+      <div className="container mx-auto px-4 py-10 text-center relative z-10 hero-content">
         <div className="max-w-4xl mx-auto">
           <h1 
-            className={`text-3xl md:text-5xl lg:text-7xl font-bold mb-4 text-white tracking-tight transition-all duration-1000 ease-out transform ${
+            className={`text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 tracking-tight transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
-            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)", transitionDelay: '200ms' }}
+            style={{ color: '#1b255a', textShadow: "2px 2px 8px rgba(255,255,255,0.95)", letterSpacing: '-0.02em', transitionDelay: '200ms', fontFamily: 'Poppins, Inter, Arial, sans-serif' }}
           >
             Transform Your Look with{' '}
-            <span className="relative inline-block">
-              <span className="text-secondary">Facial Aesthetic</span>
-              <span className="absolute -top-6 -right-6 animate-pulse-slow">
-                <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-secondary" />
+            <span className="relative inline-block align-middle">
+              <span className="inline-block px-3 py-1 rounded-lg bg-white/80 text-primary font-black shadow-lg border border-primary/20 animate-pulse">
+                Facial Aesthetic
+              </span>
+              <span className="absolute -top-6 -right-6 animate-bounce">
+                <Sparkles className="h-7 w-7 md:h-9 md:w-9 text-secondary drop-shadow-lg" />
               </span>
             </span>
           </h1>
 
           <h2
-            className={`text-xl md:text-3xl mb-4 text-white font-medium transition-all duration-1000 ease-out transform ${
+            className={`text-lg md:text-2xl mb-4 font-semibold transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
-            style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '300ms' }}
+            style={{ color: '#33c3f0', textShadow: "1px 1px 6px rgba(255,255,255,0.8)", transitionDelay: '300ms', fontFamily: 'Poppins, Inter, Arial, sans-serif' }}
           >
             Treatments in Purley
           </h2>
 
           <p
-            className={`text-base md:text-2xl max-w-3xl mx-auto mb-8 text-white leading-relaxed transition-all duration-1000 ease-out transform ${
+            className={`text-base md:text-xl max-w-3xl mx-auto mb-8 font-medium leading-relaxed transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
-            style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.5)", transitionDelay: '400ms' }}
+            style={{ color: '#283479', textShadow: "1px 1px 6px rgba(255,255,255,0.7)", transitionDelay: '400ms', fontFamily: 'Inter, Arial, sans-serif' }}
           >
-            Discover expert solutions at Confidential Clinic - where advanced technology meets compassionate care to deliver lasting, beautiful results.
+            Discover expert solutions at Confidential Clinic – quick and non-invasive injectable treatments which smooth wrinkles, rebalance facial features and create a younger, more refreshed look.
           </p>
+
+          {/* Key benefits */}
+          <div className={`flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 mb-6 transition-all duration-1000 ease-out transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          }`} style={{ transitionDelay: '500ms' }}>
+            <span className="backdrop-blur-md bg-white/40 rounded-full px-4 py-2 text-sm md:text-base font-semibold shadow text-primary border border-primary/10" style={{ WebkitBackdropFilter: 'blur(8px)' }}>
+              Dentist-led treatment
+            </span>
+            <span className="backdrop-blur-md bg-white/40 rounded-full px-4 py-2 text-sm md:text-base font-semibold shadow text-primary border border-primary/10" style={{ WebkitBackdropFilter: 'blur(8px)' }}>
+              Minimal Downtime
+            </span>
+            <span className="backdrop-blur-md bg-white/40 rounded-full px-4 py-2 text-sm md:text-base font-semibold shadow text-primary border border-primary/10" style={{ WebkitBackdropFilter: 'blur(8px)' }}>
+              Non-invasive
+            </span>
+          </div>
 
           <div
             className={`space-y-4 md:space-x-6 md:space-y-0 transition-all duration-1000 ease-out transform ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
             style={{ transitionDelay: '600ms' }}
-          >
+            >
             <a href="https://umzx.sfd.co:300" target="_blank" rel="noopener noreferrer">
               <Button
                 onClick={() => {

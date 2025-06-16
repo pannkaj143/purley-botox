@@ -166,8 +166,11 @@ const FeaturesSection = () => {
               <p className="mb-8">
                 This minimally invasive procedure offers visible results that typically last for several months. Many clients choose to repeat the treatment periodically to maintain their revitalised look — all without surgery or downtime.
               </p>
-              <div className="mt-10 pb-4 text-center"> 
-                <p className="mb-6 text-lg"> 
+              <p className="mb-8">
+                This treatment can also been effective for managing chronic pain and has also been widely used to treat migraines. Clinical studies and patient experiences suggest that it can provide significant relief from migraine symptoms, with effects lasting for up to six months in many cases.
+              </p>
+              <div className="mt-10 pb-4 text-center">
+                <p className="mb-6 text-lg">
                   Book a consultation today
                   {' '}to find out if this non-surgical anti-ageing solution is right for you.
                 </p>

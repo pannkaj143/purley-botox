@@ -17,8 +17,8 @@ const AboutClinic = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`} style={{ animationDelay: '0.2s' }}>
             <img
-              src="/images/5910ed43-26b1-4700-b2f8-5e1e6fe63012.png"
-              alt="Happy Dental Patient"
+              src="/images/about_us.png"
+              alt="About Us"
               className="rounded-lg shadow-xl max-w-full h-auto"
               style={{ maxWidth: "70%" }}
             />
