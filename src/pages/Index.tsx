@@ -15,7 +15,7 @@ const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness", // Changed from Dentist to MedicalBusiness for broader applicability
-    "name": "Confidential Clinic",
+    "name": "Confidental Clinic",
     "image": "/images/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png",
     "url": "https://yourwebsite.com",
     "telephone": "020 8660 8923",
@@ -78,8 +78,8 @@ const Index = () => {
   return (
     <div className="overflow-x-hidden">
       <Helmet>
-        <title>Botox in Purley, Banstead, Kenley and Caterham | Expert Botox Specialists | Confidential Clinic</title>
-        <meta name="description" content="Specialist Botox solutions in Purley. Transform your look with our expert Botox services at Confidential Clinic, 934 Brighton Rd, Purley." />
+        <title>Botox in Purley, Banstead, Kenley and Caterham | Expert Botox Specialists | Confidental Clinic</title>
+        <meta name="description" content="Specialist Botox solutions in Purley. Transform your look with our expert Botox services at Confidental Clinic, 934 Brighton Rd, Purley." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

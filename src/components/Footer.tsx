@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="inline-block mb-4">
               <img 
                 src="/images/bddb16ef-30c2-415d-a400-bac83cdec2eb.png" 
-                alt="Confidential Clinic Logo"
+                alt="Confidental Clinic Logo"
                 className="h-16"
               />
             </div>
@@ -61,7 +61,17 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-300">
-          <p>&copy; {currentYear} Confidential Clinic. All rights reserved.</p>
+            <p>
+            &copy; {currentYear}{' '}
+            <a
+              href="https://confidentalclinic.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white underline transition-colors"
+            >
+              Confidental Clinic
+            </a>. All rights reserved.
+            </p>
           <div className="mt-2">
             <Link to="/privacy-policy" className="text-gray-300 hover:text-white mx-2 transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-gray-300 hover:text-white mx-2 transition-colors">Terms of Service</Link>

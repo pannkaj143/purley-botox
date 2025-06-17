@@ -120,7 +120,7 @@ const HeroSection = () => {
             }`}
             style={{ color: '#283479', textShadow: "1px 1px 6px rgba(255,255,255,0.7)", transitionDelay: '400ms', fontFamily: 'Inter, Arial, sans-serif' }}
           >
-            Discover expert solutions at Confidential Clinic – quick and non-invasive injectable treatments which smooth wrinkles, rebalance facial features and create a younger, more refreshed look.
+            Discover expert solutions at Confidental Clinic – quick and non-invasive injectable treatments which smooth wrinkles, rebalance facial features and create a younger, more refreshed look.
           </p>
 
           {/* Key benefits */}
