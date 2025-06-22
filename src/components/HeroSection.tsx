@@ -45,135 +45,79 @@ const HeroSection = () => {
   return (
     <div 
       ref={heroRef} 
-      className="hero-section min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
+      className="hero-section min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-white"
       style={{
-        // Ensures the hero section covers the full viewport height including iOS notch
         height: '100vh',
         paddingTop: 'env(safe-area-inset-top)',
         paddingBottom: 'env(safe-area-inset-bottom)'
       }}
     >
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src="/images/hero_background.jpg" 
-          alt="Hero Background" 
-          className="w-full h-full object-cover opacity-90"
-          style={{ objectPosition: '60% 50%' }}
-        />
-        {/* Gradient: light on left, transparent in center, theme color on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-primary/90"></div>
-      </div>
-
-      {/* Animated particles with smoother animations */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="particles">
-          {particles.map(particle => (
-            <div
-              key={particle.id}
-              className="particle"
-              style={{
-                width: `${particle.size}px`,
-                height: `${particle.size}px`,
-                left: `${particle.x}%`,
-                top: `${particle.y}%`,
-                animation: `float ${5 + particle.speed}s infinite cubic-bezier(0.45, 0, 0.55, 1)`,
-                animationDelay: `${particle.delay}s`,
-                opacity: 0.7
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-10 text-center relative z-10 hero-content">
-        <div className="max-w-4xl mx-auto">
-          <h1 
-            className={`text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 tracking-tight transition-all duration-1000 ease-out transform ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-            style={{ color: '#1b255a', textShadow: "2px 2px 8px rgba(255,255,255,0.95)", letterSpacing: '-0.02em', transitionDelay: '200ms', fontFamily: 'Poppins, Inter, Arial, sans-serif' }}
-          >
-            Transform Your Look with{' '}
-            <span className="relative inline-block align-middle">
-              <span className="inline-block px-3 py-1 rounded-lg bg-white/80 text-primary font-black shadow-lg border border-primary/20 animate-pulse">
+      <div className="container mx-auto px-2 sm:px-4 py-8 sm:py-10 relative z-20 flex flex-col md:flex-row items-center md:items-stretch md:justify-between gap-8 h-full">
+        {/* Content left */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left h-full md:pr-8 mb-8 md:mb-0">
+          <div className="max-w-xl w-full">
+            <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight text-primary leading-tight">
+              Transform Your Look with
+              <span className="block mt-2 text-secondary font-black text-2xl xs:text-3xl md:text-4xl lg:text-5xl drop-shadow-lg">
                 Facial Aesthetic
               </span>
-              <span className="absolute -top-6 -right-6 animate-bounce">
-                <Sparkles className="h-7 w-7 md:h-9 md:w-9 text-secondary drop-shadow-lg" />
-              </span>
-            </span>
-          </h1>
-
-          <h2
-            className={`text-lg md:text-2xl mb-4 font-semibold transition-all duration-1000 ease-out transform ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-            style={{ color: '#33c3f0', textShadow: "1px 1px 6px rgba(255,255,255,0.8)", transitionDelay: '300ms', fontFamily: 'Poppins, Inter, Arial, sans-serif' }}
-          >
-            Treatments in Purley
-          </h2>
-
-          <p
-            className={`text-base md:text-xl max-w-3xl mx-auto mb-8 font-medium leading-relaxed transition-all duration-1000 ease-out transform ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-            style={{ color: '#283479', textShadow: "1px 1px 6px rgba(255,255,255,0.7)", transitionDelay: '400ms', fontFamily: 'Inter, Arial, sans-serif' }}
-          >
-            Discover expert solutions at Confidental Clinic – quick and non-invasive injectable treatments which smooth wrinkles, rebalance facial features and create a younger, more refreshed look.
-          </p>
-
-          {/* Key benefits */}
-          <div className={`flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 mb-6 transition-all duration-1000 ease-out transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`} style={{ transitionDelay: '500ms' }}>
-            <span className="backdrop-blur-md bg-white/40 rounded-full px-4 py-2 text-sm md:text-base font-semibold shadow text-primary border border-primary/10" style={{ WebkitBackdropFilter: 'blur(8px)' }}>
-              Dentist-led treatment
-            </span>
-            <span className="backdrop-blur-md bg-white/40 rounded-full px-4 py-2 text-sm md:text-base font-semibold shadow text-primary border border-primary/10" style={{ WebkitBackdropFilter: 'blur(8px)' }}>
-              Minimal Downtime
-            </span>
-            <span className="backdrop-blur-md bg-white/40 rounded-full px-4 py-2 text-sm md:text-base font-semibold shadow text-primary border border-primary/10" style={{ WebkitBackdropFilter: 'blur(8px)' }}>
-              Non-invasive
-            </span>
-          </div>
-
-          <div
-            className={`space-y-4 md:space-x-6 md:space-y-0 transition-all duration-1000 ease-out transform ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-            style={{ transitionDelay: '600ms' }}
-            >
-            <a href="https://umzx.sfd.co:300" target="_blank" rel="noopener noreferrer">
+            </h1>
+            <h2 className="text-base xs:text-lg md:text-2xl mb-2 sm:mb-4 font-semibold text-secondary">
+              Treatments in Purley
+            </h2>
+            <p className="text-sm xs:text-base md:text-lg mb-6 sm:mb-8 text-gray-700 leading-relaxed">
+              Discover expert solutions at Confidential Clinic – quick and non-invasive injectable treatments which smooth wrinkles, rebalance facial features and create a younger, more refreshed look.
+            </p>
+            <ul className="list-none pl-0 text-xs xs:text-sm md:text-base text-primary space-y-2 mb-4 sm:mb-6 text-center sm:text-left">
+              <li className="flex items-center gap-2 justify-center sm:justify-start">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                Dentist-led treatment
+              </li>
+              <li className="flex items-center gap-2 justify-center sm:justify-start">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                Minimal Downtime
+              </li>
+              <li className="flex items-center gap-2 justify-center sm:justify-start">
+                <span className="w-2 h-2 rounded-full bg-primary"></span>
+                Non-invasive
+              </li>
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full items-center justify-center sm:justify-start">
+              <a href="#contact-section" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto bg-primary text-white hover:bg-secondary hover:text-primary text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg transition-all duration-300">
+                  Book Free Consultation
+                </Button>
+              </a>
               <Button
                 onClick={() => {
-                  const contactSection = document.getElementById('contact-section');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  const serviceSection = document.getElementById('services-section');
+                  serviceSection?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-white text-primary hover:bg-secondary hover:text-white text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-lg transition-all duration-500 transform hover-lift shadow-lg"
+                className="w-full sm:w-auto bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg transition-all duration-300"
               >
-                Book Free Consultation
+                View Services
               </Button>
-            </a>
-            <Button
-              onClick={() => {
-                const serviceSection = document.getElementById('services-section');
-                serviceSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-lg transition-all duration-500 transform hover-lift"
-            >
-              View Services
-            </Button>
+            </div>
+          </div>
+        </div>
+        {/* Image right */}
+        <div className="w-full md:w-1/2 flex items-center justify-center relative">
+          <div
+            className="relative w-full max-w-[340px] xs:max-w-[400px] h-48 xs:h-64 md:w-full md:max-w-[480px] md:h-[480px] flex items-center justify-center group"
+          >
+            <img
+              src="/images/hero_background.jpg"
+              alt="Facial Aesthetic Result"
+              className="w-full h-full object-cover rounded-2xl shadow-xl border-4 border-white"
+            />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
-
       {/* Scroll indicator with improved animation */}
-      <div className={`scroll-indicator transition-all duration-1000 ease-out ${
-        isVisible ? 'opacity-70 translate-y-0' : 'opacity-0 translate-y-10'
-      }`} style={{ transitionDelay: '1200ms' }}>
-        <ChevronDown className="h-4 w-4 md:h-6 md:w-6 animate-bounce-slow" />
-        <span className="scroll-indicator__text text-xs md:text-sm">SCROLL DOWN</span>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center">
+        <ChevronDown className="h-6 w-6 text-primary animate-bounce-slow" />
+        <span className="scroll-indicator__text text-xs md:text-sm text-primary mt-1">SCROLL DOWN</span>
       </div>
     </div>
   );

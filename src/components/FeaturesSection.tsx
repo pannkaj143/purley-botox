@@ -241,14 +241,14 @@ const FeaturesSection = () => {
             </div>
 
             {/* Second row - 2 cards centered */}
-            <div className="flex justify-center gap-8">
+            <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8">
               {botoxServices.slice(3).map((service, index) => (
                 <div 
                   key={index + 3}
-                  className="w-full md:w-1/3 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
+                  className="w-full md:w-1/3 bg-white p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col mb-6 md:mb-0"
                 >
-                  <h4 className="text-xl font-semibold mb-3 text-primary">{service.title}</h4>
-                  <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
+                  <h4 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">{service.title}</h4>
+                  <p className="text-gray-600 mb-4 sm:mb-6 flex-grow text-sm sm:text-base">{service.description}</p>
                   {service.images.length > 1 ? (
                     <ServiceImageGallery 
                       beforeImage={service.images[0]}
@@ -259,7 +259,7 @@ const FeaturesSection = () => {
                     <img 
                       src={service.images[0]} 
                       alt={service.title} 
-                      className="w-full h-64 object-cover rounded-lg shadow-md mt-4"
+                      className="w-full h-44 sm:h-64 object-cover rounded-lg shadow-md mt-3 sm:mt-4"
                     />
                   )}
                 </div>
