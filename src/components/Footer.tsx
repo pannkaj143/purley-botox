@@ -1,15 +1,62 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import PolicyDialog from './PolicyDialog';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const privacyPolicyContent = (
+    <div>
+      <h2 className="text-lg font-semibold mb-4">Privacy Policy</h2>
+      <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+      <p className="mb-4">At Confidental Clinic, we take your privacy seriously. This policy describes how we collect, use, and protect your personal information.</p>
+      <h3 className="text-md font-semibold mb-2">Information We Collect</h3>
+      <p className="mb-4">We collect information that you provide directly to us, including:</p>
+      <ul className="list-disc pl-5 mb-4">
+        <li>Name and contact information</li>
+        <li>Medical and dental history</li>
+        <li>Appointment preferences</li>
+        <li>Payment information</li>
+      </ul>
+      <h3 className="text-md font-semibold mb-2">How We Use Your Information</h3>
+      <p className="mb-4">We use the information we collect to:</p>
+      <ul className="list-disc pl-5 mb-4">
+        <li>Provide dental services</li>
+        <li>Communicate about appointments</li>
+        <li>Process payments</li>
+        <li>Improve our services</li>
+      </ul>
+      <h3 className="text-md font-semibold mb-2">Data Protection</h3>
+      <p>We implement appropriate security measures to protect your personal information.</p>
+    </div>
+  );
+
+  const termsContent = (
+    <div>
+      <h2 className="text-lg font-semibold mb-4">Terms of Service</h2>
+      <p className="mb-4">Last updated: {new Date().toLocaleDateString()}</p>
+      <h3 className="text-md font-semibold mb-2">1. Acceptance of Terms</h3>
+      <p className="mb-4">By accessing and using our services, you agree to these terms and conditions.</p>
+      <h3 className="text-md font-semibold mb-2">2. Dental Services</h3>
+      <p className="mb-4">We provide dental services subject to professional assessment and suitability.</p>
+      <h3 className="text-md font-semibold mb-2">3. Appointments</h3>
+      <p className="mb-4">Please provide 24 hours notice for cancellations. Late cancellations may incur a fee.</p>
+      <h3 className="text-md font-semibold mb-2">4. Payment Terms</h3>
+      <p className="mb-4">Payment is required at the time of service unless alternative arrangements have been made.</p>
+      <h3 className="text-md font-semibold mb-2">5. Liability</h3>
+      <p>We strive to provide the best possible care but cannot guarantee specific outcomes.</p>
+    </div>
+  );
   
   return (
     <footer className="bg-primary text-white" aria-labelledby="footer-heading">
@@ -73,14 +120,28 @@ const Footer = () => {
             </a>. All rights reserved.
             </p>
           <div className="mt-2">
-            <Link to="/privacy-policy" className="text-gray-300 hover:text-white mx-2 transition-colors">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="text-gray-300 hover:text-white mx-2 transition-colors">Terms of Service</Link>
+            <button onClick={() => setShowPrivacyPolicy(true)} className="text-gray-300 hover:text-white mx-2 transition-colors">Privacy Policy</button>
+            <button onClick={() => setShowTerms(true)} className="text-gray-300 hover:text-white mx-2 transition-colors">Terms of Service</button>
           </div>
           <div className="mt-4 text-sm text-gray-400">
             Developed by <a href="https://www.karadinfotech.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Karad Infotech Ltd.</a>
           </div>
         </div>
       </div>
+
+      <PolicyDialog
+        isOpen={showPrivacyPolicy}
+        onClose={() => setShowPrivacyPolicy(false)}
+        title="Privacy Policy"
+        content={privacyPolicyContent}
+      />
+
+      <PolicyDialog
+        isOpen={showTerms}
+        onClose={() => setShowTerms(false)}
+        title="Terms of Service"
+        content={termsContent}
+      />
     </footer>
   );
 };

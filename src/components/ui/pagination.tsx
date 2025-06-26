@@ -1,8 +1,10 @@
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+import { useState } from "react"
 
 import { cn } from "@/lib/utils"
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
+import Modal from "@/components/ui/modal"
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
@@ -44,19 +46,38 @@ const PaginationLink = ({
   isActive,
   size = "icon",
   ...props
-}: PaginationLinkProps) => (
-  <a
-    aria-current={isActive ? "page" : undefined}
-    className={cn(
-      buttonVariants({
-        variant: isActive ? "outline" : "ghost",
-        size,
-      }),
-      className
-    )}
-    {...props}
-  />
-)
+}: PaginationLinkProps) => {
+  const [isModalOpen, setModalOpen] = useState(false)
+
+  const handleClick = () => {
+    setModalOpen(true)
+  }
+
+  return (
+    <>
+      <a
+        aria-current={isActive ? "page" : undefined}
+        className={cn(
+          buttonVariants({
+            variant: isActive ? "outline" : "ghost",
+            size,
+          }),
+          className
+        )}
+        onClick={handleClick}
+        {...props}
+      />
+      {isModalOpen && (
+        <Modal
+          title="Detailed Information"
+          onClose={() => setModalOpen(false)}
+        >
+          <p>Here is the detailed information for this page.</p>
+        </Modal>
+      )}
+    </>
+  )
+}
 PaginationLink.displayName = "PaginationLink"
 
 const PaginationPrevious = ({
