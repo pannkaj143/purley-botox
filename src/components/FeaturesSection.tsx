@@ -177,7 +177,7 @@ const FeaturesSection = () => {
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
                   <a
                     href="tel:+442086603308"
-                    className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-blue-700 transition-colors w-full sm:w-auto"
+                    className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary transition-colors w-full sm:w-auto"
                   >
                     <Phone className="mr-2 h-5 w-5" /> Call Us
                   </a>
@@ -265,6 +265,18 @@ const FeaturesSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Our Other Services button */}
+          <div className="text-center mt-8">
+            <a
+              href="https://confidentalclinic.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white  bg-primary hover:bg-secondary transition-colors"
+            >
+              <Stethoscope className="mr-2 h-5 w-5" /> Our Other Services
+            </a>
           </div>
         </div>
       </section>

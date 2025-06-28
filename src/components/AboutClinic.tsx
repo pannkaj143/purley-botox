@@ -25,7 +25,7 @@ const AboutClinic = () => {
           </div>
           
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-            <h2 className="text-3xl font-bold mb-4">WELCOME TO Confidental CLINIC</h2>
+            <h2 className="text-3xl font-bold mb-4">WELCOME TO CONFIDENTAL CLINIC</h2>
             <p className="text-gray-700 mb-6">
               Highly specialized and personalised to ensure that all aspects of 
               care are provided with patience, knowledge and attention to 

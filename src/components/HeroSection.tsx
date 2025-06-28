@@ -103,7 +103,7 @@ const HeroSection = () => {
         {/* Image right */}
         <div className="w-full md:w-1/2 flex items-center justify-center relative">
           <div
-            className="relative w-full max-w-[340px] xs:max-w-[400px] h-48 xs:h-64 md:w-full md:max-w-[480px] md:h-[480px] flex items-center justify-center group"
+            className="hidden sm:flex relative w-full max-w-[340px] xs:max-w-[400px] h-48 xs:h-64 md:w-full md:max-w-[480px] md:h-[480px] items-center justify-center group"
           >
             <img
               src="/images/hero_background.jpg"
@@ -122,5 +122,26 @@ const HeroSection = () => {
     </div>
   );
 };
+
+// Improved layout for mobile
+export const WhyChooseUsSection = () => (
+  <section className="container mx-auto px-4 py-8 sm:py-10 bg-gray-50">
+    <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 gap-6 items-center">
+      <div className="flex flex-col items-center sm:items-start text-center sm:text-left mt-6 sm:mt-0">
+        <h3 className="text-xl font-bold text-primary mb-4">Why Choose Us?</h3>
+        <p className="text-sm text-gray-700 leading-relaxed max-w-md">
+          Our treatments are designed to provide natural-looking results with minimal downtime. Led by experienced professionals, we ensure your comfort and satisfaction.
+        </p>
+      </div>
+      <div className="flex items-center justify-center w-full">
+        <img
+          src="/images/about_us.png"
+          alt="About Us"
+          className="w-4/5 max-w-[300px] rounded-lg shadow-md object-cover"
+        />
+      </div>
+    </div>
+  </section>
+);
 
 export default HeroSection;
