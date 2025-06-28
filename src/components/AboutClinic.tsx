@@ -24,26 +24,24 @@ const AboutClinic = () => {
             />
           </div>
           
-          <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+          <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'} text-center md:text-left flex flex-col items-center md:items-start`} style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl font-bold mb-4">WELCOME TO CONFIDENTAL CLINIC</h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-6 max-w-xl">
               Highly specialized and personalised to ensure that all aspects of 
               care are provided with patience, knowledge and attention to 
               detail in order to maintain optimal health, resulting in happy 
               and satisfied patients.
             </p>
-            
-            <div className="space-y-4 mt-8">
+            <div className="space-y-4 mt-8 w-full max-w-xl">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
+                <div key={index} className="flex items-start justify-center md:justify-start">
                   <div className="flex-shrink-0 mt-1">
                     <Check className="h-5 w-5 text-secondary" />
                   </div>
-                  <p className="ml-3 text-gray-700">{benefit}</p>
+                  <p className="ml-3 text-gray-700 text-left md:text-left">{benefit}</p>
                 </div>
               ))}
             </div>
-            
             <button 
               className="mt-8 bg-primary hover:bg-secondary text-white font-medium px-6 py-3 rounded-md transition-colors"
               onClick={() => {
