@@ -177,7 +177,7 @@ const FeaturesSection = () => {
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
                   <a
                     href="tel:+442086603308"
-                    className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary transition-colors w-full sm:w-auto"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-white bg-primary hover:bg-secondary hover:text-primary transition-colors"
                   >
                     <Phone className="mr-2 h-5 w-5" /> Call Us
                   </a>
@@ -190,7 +190,7 @@ const FeaturesSection = () => {
                         contactSection.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary bg-secondary hover:bg-yellow-500 hover:text-white transition-colors w-full sm:w-auto"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-primary bg-secondary hover:bg-yellow-500 hover:text-white transition-colors"
                   >
                     <User className="mr-2 h-5 w-5" /> Contact Us
                   </a>
@@ -201,8 +201,44 @@ const FeaturesSection = () => {
         </div>
       </section>
 
+      {/* Migraine Relief Section */}
+      <section className="py-12 md:py-20 bg-gray-50" id="migraine-relief">
+        <div className="container mx-auto px-2 sm:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image left on desktop, top on mobile */}
+            <div className="flex justify-center order-1 md:order-none animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <img
+                src="/images/Relief-Beyond-Wrinkles.png"
+                alt="Relief Beyond Wrinkles - Migraine Treatment"
+                className="rounded-lg shadow-xl max-w-full h-auto border-4 border-white"
+                style={{ maxWidth: '70%' }}
+              />
+            </div>
+            {/* Text content */}
+            <div className="text-center md:text-left flex flex-col items-center md:items-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <h2 className="text-3xl font-bold mb-4 text-primary">Relief Beyond Wrinkles: The Therapeutic Power of Botulinum Toxin Type A for Migraines</h2>
+              <p className="text-gray-700 mb-6 max-w-xl">
+                For individuals living with <span className="font-semibold text-primary">chronic migraines</span>—defined as experiencing headaches on 15 or more days per month—Botulinum Toxin Type A offers more than cosmetic benefits. This neuromodulating treatment has emerged as a powerful tool in the fight against debilitating headache disorders.
+              </p>
+              <ul className="space-y-2 mb-6 w-full max-w-xl text-left list-disc pl-6">
+                <li>Works preventatively by blocking pain-associated neurotransmitters when injected into specific areas of the head and neck.</li>
+                <li>Reduces the frequency, intensity, and duration of migraine days over time.</li>
+                <li>Clinical studies show up to a <span className="font-semibold text-primary">50% reduction</span> in headache days for many individuals with repeated treatments (every 12 weeks).</li>
+                <li>Especially effective for high-frequency migraines, with benefits increasing over successive cycles.</li>
+                <li>Minimally invasive: sessions last ~20 minutes with a series of small injections; side effects are generally mild and localized.</li>
+                <li>Often covered by insurance for those who meet criteria for chronic migraine.</li>
+              </ul>
+              <p className="text-base text-gray-700 mb-4 max-w-xl">
+                In the evolving landscape of migraine management, Botulinum Toxin Type A stands out as a scientifically backed, patient-approved solution—offering not just fewer headaches, but a renewed sense of control and quality of life.
+              </p>
+              <p className="text-sm text-gray-500 font-medium max-w-xl">Please note this treatment is available only via referral and is not suitable for everyone.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Patient Gallery and Treatment Zones Section */}
-      <section className="py-20 bg-gray-50" id="treatment-zones">
+      <section className="py-20 bg-white" id="treatment-zones">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Patient Gallery and Treatment Zones</h3>
@@ -273,7 +309,7 @@ const FeaturesSection = () => {
               href="https://confidentalclinic.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white  bg-primary hover:bg-secondary transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-white bg-primary hover:bg-secondary transition-colors"
             >
               <Stethoscope className="mr-2 h-5 w-5" /> Our Other Services
             </a>
@@ -293,7 +329,7 @@ const FeaturesSection = () => {
             </p>
             <a
               href="tel:+442086603308"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md shadow-sm text-primary bg-white hover:bg-gray-100 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md shadow-lg text-primary bg-white hover:bg-gray-100 transition-colors"
             >
               <Phone className="mr-2 h-6 w-6" /> Call Us Now
             </a>

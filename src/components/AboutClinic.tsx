@@ -12,9 +12,9 @@ const AboutClinic = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="about-section" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section ref={sectionRef} id="about-section" className="py-12 md:py-20 bg-gray-50">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`} style={{ animationDelay: '0.2s' }}>
             <img
               src="/images/about_us.png"
@@ -43,7 +43,7 @@ const AboutClinic = () => {
               ))}
             </div>
             <button 
-              className="mt-8 bg-primary hover:bg-secondary text-white font-medium px-6 py-3 rounded-md transition-colors"
+              className="w-full sm:w-auto bg-primary text-white hover:bg-secondary hover:text-primary text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg transition-all duration-300 mt-8"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 contactSection?.scrollIntoView({ behavior: 'smooth' });

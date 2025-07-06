@@ -98,17 +98,28 @@ const HeroSection = () => {
                 View Services
               </Button>
             </div>
+            {/* Hero image: below buttons on mobile, right column on desktop */}
+            <div className="block md:hidden flex w-full justify-center mt-6">
+              <div className="relative w-4/5 max-w-[320px] xs:max-w-[360px] h-40 xs:h-56 flex items-center justify-center group shadow-lg">
+                <img
+                  src="/images/hero_background.jpg"
+                  alt="Facial Aesthetic Result"
+                  className="w-full h-full object-cover rounded-2xl border-4 border-white"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Image right */}
-        <div className="w-full md:w-1/2 flex items-center justify-center relative">
+        <div className="hidden md:flex w-full md:w-1/2 items-center justify-center relative mt-6 md:mt-0">
           <div
-            className="hidden sm:flex relative w-full max-w-[340px] xs:max-w-[400px] h-48 xs:h-64 md:w-full md:max-w-[480px] md:h-[480px] items-center justify-center group"
+            className="relative w-full max-w-[480px] h-[480px] flex items-center justify-center group shadow-lg"
           >
             <img
               src="/images/hero_background.jpg"
               alt="Facial Aesthetic Result"
-              className="w-full h-full object-cover rounded-2xl shadow-xl border-4 border-white"
+              className="w-full h-full object-cover rounded-2xl border-4 border-white"
             />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
           </div>
