@@ -82,6 +82,17 @@ const HeroSection = () => {
                 Non-invasive
               </li>
             </ul>
+            {/* Hero image: above buttons on mobile, right column on desktop */}
+            <div className="flex md:hidden w-full justify-center mb-6">
+              <div className="relative w-4/5 max-w-[320px] xs:max-w-[360px] h-40 xs:h-56 flex items-center justify-center group shadow-lg">
+                <img
+                  src="/images/hero_background.jpg"
+                  alt="Facial Aesthetic Result"
+                  className="w-full h-full object-cover rounded-2xl border-4 border-white"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full items-center justify-center sm:justify-start">
               <a href="#contact-section" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto bg-primary text-white hover:bg-secondary hover:text-primary text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg transition-all duration-300">
@@ -98,17 +109,7 @@ const HeroSection = () => {
                 View Services
               </Button>
             </div>
-            {/* Hero image: below buttons on mobile, right column on desktop */}
-            <div className="block md:hidden flex w-full justify-center mt-6">
-              <div className="relative w-4/5 max-w-[320px] xs:max-w-[360px] h-40 xs:h-56 flex items-center justify-center group shadow-lg">
-                <img
-                  src="/images/hero_background.jpg"
-                  alt="Facial Aesthetic Result"
-                  className="w-full h-full object-cover rounded-2xl border-4 border-white"
-                />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
-              </div>
-            </div>
+            
           </div>
         </div>
         {/* Image right */}
