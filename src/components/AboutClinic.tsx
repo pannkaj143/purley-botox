@@ -43,7 +43,8 @@ const AboutClinic = () => {
               ))}
             </div>
             <button 
-              className="w-full sm:w-auto bg-primary text-white hover:bg-secondary hover:text-primary text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg transition-all duration-300 mt-8"
+              className="w-full sm:w-auto bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white text-base px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg transition-all duration-300 mt-8 font-semibold tracking-wide"
+              type="button"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 contactSection?.scrollIntoView({ behavior: 'smooth' });
