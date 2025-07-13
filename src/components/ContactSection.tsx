@@ -134,7 +134,14 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Address</h4>
-                  <p className="text-gray-600">934 Brighton Rd, Purley CR8 2LN</p>
+                  <a 
+                    href="https://maps.google.com/?q=934+Brighton+Rd,+Purley+CR8+2LN" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-primary transition-colors duration-200"
+                  >
+                    934 Brighton Rd, Purley CR8 2LN
+                  </a>
                 </div>
               </div>
               
@@ -144,7 +151,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <p className="text-gray-600">020 8660 8923</p>
+                  <a 
+                    href="tel:+442086608923" 
+                    className="text-gray-600 hover:text-primary transition-colors duration-200"
+                  >
+                    020 8660 8923
+                  </a>
                 </div>
               </div>
               
@@ -154,7 +166,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-gray-600">purley@confidentalclinic.com</p>
+                  <a 
+                    href="mailto:purley@confidentalclinic.com" 
+                    className="text-gray-600 hover:text-primary transition-colors duration-200"
+                  >
+                    purley@confidentalclinic.com
+                  </a>
                 </div>
               </div>
               
@@ -190,7 +207,7 @@ const ContactSection = () => {
         <div className="mt-16">
           <div className="h-[400px] rounded-lg overflow-hidden shadow-md">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2491.589145418566!2d-0.12462888421770283!3d51.33651677960462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876075651602d49%3A0xc1d9c376d96b0985!2s934%20Brighton%20Rd%2C%20Purley%20CR8%202LN%2C%20UK!5e0!3m2!1sen!2sus!4v1685264310957!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.4710840543603!2d-0.11595720000000002!3d51.3392476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875fd98707836b1%3A0xbf9f0cdf4cdf33ac!2sConfiDental%20Clinic%20Purley!5e0!3m2!1sen!2suk!4v1752433585031!5m2!1sen!2suk" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
