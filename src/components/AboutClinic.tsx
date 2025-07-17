@@ -18,7 +18,7 @@ const AboutClinic = () => {
           <div className={`${isVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`} style={{ animationDelay: '0.2s' }}>
             <img
               src="/images/about_us.png"
-              alt="About Us"
+              alt="Confidental Clinic Purley - Facial Aesthetics and Anti-Wrinkle Treatment Specialists"
               className="rounded-lg shadow-xl max-w-full h-auto"
               style={{ maxWidth: "70%" }}
             />

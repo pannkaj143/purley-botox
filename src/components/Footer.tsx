@@ -72,7 +72,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-300 mt-4">
-              Providing exceptional dental implant services and transforming smiles in Purley.
+              Enhancing natural beauty and confidence with expert facial aesthetics in Purley.
             </p>
           </div>
           

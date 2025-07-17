@@ -1,5 +1,6 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "confidental-clinic-facial-aesthetics",
+  "description": "Confidental Clinic - Premium facial aesthetics and anti-wrinkle treatments in Purley, Surrey",
   "private": true,
   "version": "0.0.0",
   "type": "module",

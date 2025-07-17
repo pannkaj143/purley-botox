@@ -7,16 +7,16 @@ interface SEOProps {
   ogType?: 'website' | 'article';
   ogImage?: string;
   ogImageAlt?: string;
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEO = ({
-  title = 'Botox in Purley, Banstead, Kenley and Caterham | Confidental Clinic',
-  description = 'Expert Botox solutions in Purley. Transform your look with our specialized Botox services at Confidental Clinic.',
+  title = 'Facial Aesthetics in Purley, Banstead, Kenley and Caterham | Expert Anti-Wrinkle Treatments | Confidental Clinic',
+  description = 'Premium facial aesthetics and anti-wrinkle treatments in Purley. Transform your look with our expert cosmetic procedures at Confidental Clinic. Non-invasive, natural-looking results with minimal downtime.',
   canonicalUrl = 'https://yourwebsite.com',
   ogType = 'website',
   ogImage = '/images/bcf8abc3-36c7-4874-8e33-6149cc9ba16a.png',
-  ogImageAlt = 'Confidental Clinic - Botox in Purley',
+  ogImageAlt = 'Confidental Clinic - Facial Aesthetics in Purley',
   structuredData
 }: SEOProps) => {
   return (

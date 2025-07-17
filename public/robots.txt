@@ -1,15 +1,24 @@
 
-# Allow all crawlers
+# Allow all crawlers for facial aesthetics clinic
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://yourwebsite.com/sitemap.xml
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
 
-# Specify important pages
-Allow: /
+# Priority pages for facial aesthetics
+Allow: /facial-aesthetics
+Allow: /anti-wrinkle-treatments
 Allow: /contact
 Allow: /services
 Allow: /about
 Allow: /testimonials
-Allow: /faq
+Allow: /book-consultation
+
+# Sitemap
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1

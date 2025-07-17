@@ -87,7 +87,7 @@ const HeroSection = () => {
               <div className="relative w-4/5 max-w-[320px] xs:max-w-[360px] h-40 xs:h-56 flex items-center justify-center group shadow-lg">
                 <img
                   src="/images/hero_background.jpg"
-                  alt="Facial Aesthetic Result"
+                  alt="Facial Aesthetics Treatment Results - Before and After at Confidental Clinic Purley"
                   className="w-full h-full object-cover rounded-2xl border-4 border-white"
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
@@ -119,7 +119,7 @@ const HeroSection = () => {
           >
             <img
               src="/images/hero_background.jpg"
-              alt="Facial Aesthetic Result"
+              alt="Premium Facial Aesthetics Treatments - Confidental Clinic Purley Surrey"
               className="w-full h-full object-cover rounded-2xl border-4 border-white"
             />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-l from-primary/60 via-transparent to-transparent"></div>
