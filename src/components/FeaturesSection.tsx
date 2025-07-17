@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Check, Phone, User, Stethoscope, ChevronRight, ChevronLeft } from 'lucide-react'; // Chevron icons can be reused for the slider handle
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAnimation } from '@/hooks/use-animation';
 import MigraineTreatmentSection from './MigraineTreatmentSection';
+import '@/styles/image-slider.css';
 
 interface ServiceImageGalleryProps {
   beforeImage: string;
@@ -11,92 +12,106 @@ interface ServiceImageGalleryProps {
 }
 
 const ServiceImageGallery: React.FC<ServiceImageGalleryProps> = ({ beforeImage, afterImage, title }) => {
-  const [sliderPosition, setSliderPosition] = useState(50); // Percentage
+  const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
-    // Only start dragging if the click is directly on the container or the intended handle area
-    // For simplicity, we allow dragging by clicking anywhere on the component for now.
-    setIsDragging(true);
-    // Prevent text selection during drag
-    event.preventDefault();
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging || !containerRef.current) return;
-
+  const getPositionFromEvent = (event: MouseEvent | TouchEvent): number => {
+    if (!containerRef.current) return 50;
+    
     const rect = containerRef.current.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    let newPosition = (x / rect.width) * 100;
-    newPosition = Math.max(0, Math.min(100, newPosition)); // Clamp between 0 and 100
-    setSliderPosition(newPosition);
+    const clientX = 'touches' in event ? event.touches[0]?.clientX : event.clientX;
+    if (!clientX) return 50;
+    
+    const x = clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+    return Math.max(0, Math.min(100, percentage));
   };
+
+  const handleStart = (event: React.MouseEvent | React.TouchEvent) => {
+    event.preventDefault();
+    setIsDragging(true);
+    
+    const position = getPositionFromEvent(event.nativeEvent);
+    setSliderPosition(position);
+  };
+
+  const handleMove = useCallback((event: MouseEvent | TouchEvent) => {
+    if (!isDragging) return;
+    
+    const position = getPositionFromEvent(event);
+    setSliderPosition(position);
+  }, [isDragging]);
+
+  const handleEnd = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMove, { passive: false });
+      document.addEventListener('mouseup', handleEnd);
+      document.addEventListener('touchmove', handleMove, { passive: false });
+      document.addEventListener('touchend', handleEnd);
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMove);
+      document.removeEventListener('mouseup', handleEnd);
+      document.removeEventListener('touchmove', handleMove);
+      document.removeEventListener('touchend', handleEnd);
+    };
+  }, [isDragging, handleMove, handleEnd]);
+
+  // Update CSS custom property immediately for better performance
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.style.setProperty('--slider-position', `${sliderPosition}%`);
+    }
+  }, [sliderPosition]);
 
   if (!beforeImage || !afterImage) {
     return null;
   }
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-64 overflow-hidden cursor-ew-resize select-none group mt-4 rounded-lg shadow-md"
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      onTouchStart={(e) => { // Basic touch support
-        setIsDragging(true);
-        e.preventDefault();
-      }}
-      onTouchEnd={() => setIsDragging(false)}
-      onTouchMove={(e) => {
-        if (!isDragging || !containerRef.current || !e.touches[0]) return;
-        const rect = containerRef.current.getBoundingClientRect();
-        const x = e.touches[0].clientX - rect.left;
-        let newPosition = (x / rect.width) * 100;
-        newPosition = Math.max(0, Math.min(100, newPosition));
-        setSliderPosition(newPosition);
-      }}
-    >
-      {/* Before Image */}
-      <img
-        src={beforeImage}
-        alt={`${title} - Before`}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        draggable="false"
-      />
-
-      {/* After Image Container (clipped) */}
+    <div className="mt-4">
       <div
-        className="absolute top-0 left-0 h-full overflow-hidden pointer-events-none"
-        style={{ width: `${sliderPosition}%` }}
+        ref={containerRef}
+        className="image-slider-container"
+        onMouseDown={handleStart}
+        onTouchStart={handleStart}
       >
-        <img
-          src={afterImage}
-          alt={`${title} - After`}
-          className="block h-full object-cover pointer-events-none"
-          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%' }}
-          draggable="false"
-        />
-      </div>
+        {/* Before Image - Background */}
+        <div className="image-slider-before">
+          <img
+            src={beforeImage}
+            alt={`${title} - Before`}
+            draggable="false"
+          />
+        </div>
 
-      {/* Slider Handle Line & Visual Cue */}
-      <div
-        className="absolute top-0 bottom-0 w-1.5 bg-white opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none z-10"
-        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
-      >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/70 group-hover:bg-white shadow-xl flex items-center justify-center transition-all">
-          <ChevronLeft size={20} className="text-primary opacity-70 -mr-1" />
-          <ChevronRight size={20} className="text-primary opacity-70 -ml-1" />
+        {/* After Image - Clipped */}
+        <div className="image-slider-after">
+          <img
+            src={afterImage}
+            alt={`${title} - After`}
+            draggable="false"
+          />
+        </div>
+
+        {/* Slider Line */}
+        <div className="image-slider-line" />
+
+        {/* Slider Handle */}
+        <div className={`image-slider-handle ${isDragging ? 'dragging' : ''}`}>
+          <ChevronLeft size={14} className="text-gray-600 -mr-0.5" />
+          <ChevronRight size={14} className="text-gray-600 -ml-0.5" />
+        </div>
+
+        {/* Instruction */}
+        <div className="image-slider-instruction">
+          Drag to compare
         </div>
       </div>
     </div>
